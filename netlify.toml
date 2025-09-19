@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  # Optionally set VITE_BASE here, but Netlify can also be configured in the UI.
+  # VITE_BASE = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

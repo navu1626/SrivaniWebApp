@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Rich text editor content styles */
+.prose {
+  color: inherit;
+  max-width: none;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  color: inherit;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.prose h1 {
+  font-size: 1.5em;
+}
+
+.prose h2 {
+  font-size: 1.25em;
+}
+
+.prose h3 {
+  font-size: 1.125em;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-bottom: 0.25em;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose u {
+  text-decoration: underline;
+}
+
+.prose a {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #d97706;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1em 0;
+}
+
+/* Your custom styles here */
+
+/* Global Guruji Background */
+.guruji-bg {
+  background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.92)), url('/Images/Guruji.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.guruji-bg-light {
+  background-image: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.98)), url('/Images/Guruji.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.logoText {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+.text-cream-100 {
+    --tw-text-opacity: 1;
+    color: #610F01;
+    font-weight: bold;
+}
+
+.text-gray-800 {
+    --tw-text-opacity: 1;
+    color: #610F01;
+
+}
+
+
+.text-sm {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.w-10 {
+    width: 4.5rem;
+}
+.inset-0 {
+    inset: -10px !important;
+} 
+
+
+
+.h-10 {
+    height: 4.5rem;
+}
+
+.text-4xl {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .md\:text-5xl {
+        font-size: 2rem !important;
+        line-height: 1;
+    }
+}
+@media (min-width: 1024px) {
+    .lg\:text-7xl {
+        font-size: 3rem !important;
+        line-height: 1;
+    }
+}
