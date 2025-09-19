@@ -1,8 +1,15 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
 
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+const backendEnv = import.meta.env.VITE_BACKEND_ENV;
+const API_BASE_URL =
+  backendEnv === 'local'
+    ? 'http://localhost:5000'
+    : 'https://srivaniwebapp.onrender.com';
 const API_VERSION = 'v1';
+
+// Log the current API base URL
+console.log('Frontend is using API:', API_BASE_URL);
 
 // Create axios instance
 const api: AxiosInstance = axios.create({
