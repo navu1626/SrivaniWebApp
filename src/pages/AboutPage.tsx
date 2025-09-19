@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import parchment from '../images/parchment-texture.jpg';
+import parchment from '../Images/parchment-texture.jpg';
 
 export default function AboutPage() {
   return (
