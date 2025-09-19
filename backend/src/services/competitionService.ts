@@ -1,7 +1,5 @@
-import { executeQuery } from '@/config/database';
-import { NotFoundError } from '@/middleware/errorHandler';
-
-import { DatabaseError, ValidationError } from '@/middleware/errorHandler';
+import { executeQuery } from '../config/database';
+import { NotFoundError, DatabaseError, ValidationError } from '../middleware/errorHandler';
 
 export type CreateCompetitionPayload = {
   title: string;

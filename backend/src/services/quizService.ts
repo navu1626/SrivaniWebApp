@@ -1,5 +1,5 @@
-import { executeQuery } from '@/config/database';
-import { ValidationError, NotFoundError } from '@/middleware/errorHandler';
+import { executeQuery } from '../config/database';
+import { ValidationError, NotFoundError } from '../middleware/errorHandler';
 
 export type QuizAttemptStatus = 'InProgress' | 'Completed' | 'Submitted' | 'TimedOut';
 

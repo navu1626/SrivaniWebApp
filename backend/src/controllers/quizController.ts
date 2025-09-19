@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import { quizService } from '@/services/quizService';
+import { quizService } from '../services/quizService';
 
 import { validationResult } from 'express-validator';
-import { ApiResponse } from '@/types';
+import { ApiResponse } from '../types';
 import {
   ValidationError,
   NotFoundError
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 class QuizController {
   /**

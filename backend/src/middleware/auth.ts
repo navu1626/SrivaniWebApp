@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import { JWTPayload } from '@/types';
+import { JWTPayload } from '../types';
 import { AuthenticationError, AuthorizationError } from './errorHandler';
 
 // Extend Request interface to include user

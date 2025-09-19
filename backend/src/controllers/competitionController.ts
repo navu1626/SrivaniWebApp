@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
-import { ApiResponse, PaginatedResponse } from '@/types';
+import { ApiResponse, PaginatedResponse } from '../types';
 import {
   ValidationError,
   NotFoundError
-} from '@/middleware/errorHandler';
-import { competitionService } from '@/services/competitionService';
+} from '../middleware/errorHandler';
+import { competitionService } from '../services/competitionService';
 
 
 class CompetitionController {

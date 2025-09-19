@@ -1,8 +1,8 @@
 import express from 'express';
 import { body } from 'express-validator';
-import { competitionController } from '@/controllers/competitionController';
-import { asyncHandler } from '@/middleware/errorHandler';
-import { adminMiddleware, authMiddleware } from '@/middleware/auth';
+import { competitionController } from '../controllers/competitionController';
+import { asyncHandler } from '../middleware/errorHandler';
+import { adminMiddleware, authMiddleware } from '../middleware/auth';
 
 const router = express.Router();
 

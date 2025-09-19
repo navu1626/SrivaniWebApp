@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.userController = void 0;
 const express_validator_1 = require("express-validator");
-const userService_1 = require("@/services/userService");
-const errorHandler_1 = require("@/middleware/errorHandler");
+const userService_1 = require("../services/userService");
+const errorHandler_1 = require("../middleware/errorHandler");
 class UserController {
     async getProfile(req, res) {
         const userId = req.user.userId;

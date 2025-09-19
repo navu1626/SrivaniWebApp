@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { adminService } from '@/services/adminService';
+import { adminService } from '../services/adminService';
 
 class AdminController {
   async getStats(req: Request, res: Response) {

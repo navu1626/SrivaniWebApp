@@ -1,12 +1,12 @@
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
-import { executeQuery, executeStoredProcedure } from '@/config/database';
-import { User, RegisterRequest } from '@/types';
+import { executeQuery, executeStoredProcedure } from '../config/database';
+import { User, RegisterRequest } from '../types';
 import { 
   DatabaseError, 
   NotFoundError, 
   ConflictError 
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 class UserService {
   /**

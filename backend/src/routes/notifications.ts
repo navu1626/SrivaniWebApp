@@ -1,7 +1,7 @@
 import express from 'express';
-import { asyncHandler } from '@/middleware/errorHandler';
-import { authMiddleware, adminMiddleware } from '@/middleware/auth';
-import { notificationController } from '@/controllers/notificationController';
+import { asyncHandler } from '../middleware/errorHandler';
+import { authMiddleware, adminMiddleware } from '../middleware/auth';
+import { notificationController } from '../controllers/notificationController';
 
 const router = express.Router();
 

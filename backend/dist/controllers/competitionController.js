@@ -35,8 +35,8 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.competitionController = void 0;
 const express_validator_1 = require("express-validator");
-const errorHandler_1 = require("@/middleware/errorHandler");
-const competitionService_1 = require("@/services/competitionService");
+const errorHandler_1 = require("../middleware/errorHandler");
+const competitionService_1 = require("../services/competitionService");
 class CompetitionController {
     async getAllCompetitions(req, res) {
         const page = parseInt(req.query.page || '1', 10);

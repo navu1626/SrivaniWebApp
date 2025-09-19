@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import { User } from '@/types';
-import { DatabaseError } from '@/middleware/errorHandler';
+import { User } from '../types';
+import { DatabaseError } from '../middleware/errorHandler';
 
 class EmailService {
   private transporter: nodemailer.Transporter;

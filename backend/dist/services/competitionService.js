@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.competitionService = void 0;
-const database_1 = require("@/config/database");
-const errorHandler_1 = require("@/middleware/errorHandler");
-const errorHandler_2 = require("@/middleware/errorHandler");
+const database_1 = require("../config/database");
+const errorHandler_1 = require("../middleware/errorHandler");
 class CompetitionService {
     async copyCompetition(adminUserId, sourceCompetitionId) {
         const comp = await this.getCompetitionById(sourceCompetitionId);
@@ -101,10 +100,10 @@ class CompetitionService {
             const start = new Date(payload.startDate);
             const end = new Date(payload.endDate);
             if (!(start instanceof Date) || isNaN(start.getTime()) || !(end instanceof Date) || isNaN(end.getTime())) {
-                throw new errorHandler_2.ValidationError('Invalid start or end date');
+                throw new errorHandler_1.ValidationError('Invalid start or end date');
             }
             if (end <= start) {
-                throw new errorHandler_2.ValidationError('End date must be after start date');
+                throw new errorHandler_1.ValidationError('End date must be after start date');
             }
             const questionsPerPage = payload.questionsPerPage ?? 1;
             const hasTimeLimit = !!payload.hasTimeLimit;
@@ -145,7 +144,7 @@ class CompetitionService {
             });
             const competitionId = compResult.recordset?.[0]?.CompetitionID;
             if (!competitionId) {
-                throw new errorHandler_2.DatabaseError('Failed to create competition');
+                throw new errorHandler_1.DatabaseError('Failed to create competition');
             }
             if (payload.questions && payload.questions.length) {
                 let order = 1;
@@ -174,7 +173,7 @@ class CompetitionService {
                     });
                     const questionId = qResult.recordset?.[0]?.QuestionID;
                     if (!questionId) {
-                        throw new errorHandler_2.DatabaseError('Failed to insert question');
+                        throw new errorHandler_1.DatabaseError('Failed to insert question');
                     }
                     if (q.type === 'mcq' && q.options && q.options.length) {
                         for (let i = 0; i < q.options.length; i++) {
@@ -202,9 +201,9 @@ class CompetitionService {
             return { competitionId };
         }
         catch (error) {
-            if (error instanceof errorHandler_2.ValidationError)
+            if (error instanceof errorHandler_1.ValidationError)
                 throw error;
-            throw new errorHandler_2.DatabaseError('Failed to create competition');
+            throw new errorHandler_1.DatabaseError('Failed to create competition');
         }
     }
     async getAllCompetitions(page, limit, status) {
@@ -249,7 +248,7 @@ class CompetitionService {
             return { items, total, page, limit, totalPages };
         }
         catch (e) {
-            throw new errorHandler_2.DatabaseError('Failed to load competitions');
+            throw new errorHandler_1.DatabaseError('Failed to load competitions');
         }
     }
     async getCompetitionById(competitionId) {
@@ -491,7 +490,7 @@ class CompetitionService {
             return mappedQuestions;
         }
         catch (error) {
-            throw new errorHandler_2.DatabaseError('Failed to fetch competition questions');
+            throw new errorHandler_1.DatabaseError('Failed to fetch competition questions');
         }
     }
 }

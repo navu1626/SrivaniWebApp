@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const express_validator_1 = require("express-validator");
-const competitionController_1 = require("@/controllers/competitionController");
-const errorHandler_1 = require("@/middleware/errorHandler");
-const auth_1 = require("@/middleware/auth");
+const competitionController_1 = require("../controllers/competitionController");
+const errorHandler_1 = require("../middleware/errorHandler");
+const auth_1 = require("../middleware/auth");
 const router = express_1.default.Router();
 const createCompetitionValidation = [
     (0, express_validator_1.body)('title')

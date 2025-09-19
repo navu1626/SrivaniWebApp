@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { User } from '@/types';
+import { User } from '../types';
 declare class AuthService {
     generateTokens(user: User): Promise<{
         accessToken: string;

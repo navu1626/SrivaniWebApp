@@ -3,22 +3,22 @@ import { validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
-import { authService } from '@/services/authService';
-import { userService } from '@/services/userService';
-import { emailService } from '@/services/emailService';
+import { authService } from '../services/authService';
+import { userService } from '../services/userService';
+import { emailService } from '../services/emailService';
 import { 
   AuthResponse, 
   LoginRequest, 
   RegisterRequest, 
   JWTPayload,
   ApiResponse 
-} from '@/types';
+} from '../types';
 import { 
   ValidationError, 
   AuthenticationError, 
   ConflictError,
   NotFoundError 
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 class AuthController {
   /**

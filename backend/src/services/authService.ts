@@ -2,14 +2,14 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
 import { Request } from 'express';
-import { executeQuery, executeStoredProcedure } from '@/config/database';
-import { User, UserSession, JWTPayload } from '@/types';
+import { executeQuery, executeStoredProcedure } from '../config/database';
+import { User, UserSession, JWTPayload } from '../types';
 import { 
   AuthenticationError, 
   ValidationError, 
   NotFoundError,
   DatabaseError 
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 class AuthService {
   /**

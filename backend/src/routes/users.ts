@@ -1,8 +1,8 @@
 import express from 'express';
 import { body, query } from 'express-validator';
-import { userController } from '@/controllers/userController';
-import { asyncHandler } from '@/middleware/errorHandler';
-import { authMiddleware, adminMiddleware, ownerOrAdminMiddleware } from '@/middleware/auth';
+import { userController } from '../controllers/userController';
+import { asyncHandler } from '../middleware/errorHandler';
+import { authMiddleware, adminMiddleware, ownerOrAdminMiddleware } from '../middleware/auth';
 
 const router = express.Router();
 

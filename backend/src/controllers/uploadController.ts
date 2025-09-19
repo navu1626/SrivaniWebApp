@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
-import { ApiResponse } from '@/types';
+import { ApiResponse } from '../types';
 import {
   ValidationError,
   NotFoundError
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, '../../uploads');

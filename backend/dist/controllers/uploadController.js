@@ -7,7 +7,7 @@ exports.uploadController = exports.questionImageUpload = void 0;
 const multer_1 = __importDefault(require("multer"));
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-const errorHandler_1 = require("@/middleware/errorHandler");
+const errorHandler_1 = require("../middleware/errorHandler");
 const uploadsDir = path_1.default.join(__dirname, '../../uploads');
 const questionImagesDir = path_1.default.join(uploadsDir, 'question-images');
 if (!fs_1.default.existsSync(uploadsDir)) {

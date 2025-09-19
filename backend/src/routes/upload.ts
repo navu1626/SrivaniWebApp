@@ -1,9 +1,9 @@
 import express from 'express';
 import multer from 'multer';
 import path from 'path';
-import { uploadController, questionImageUpload } from '@/controllers/uploadController';
-import { asyncHandler } from '@/middleware/errorHandler';
-import { authMiddleware, adminMiddleware } from '@/middleware/auth';
+import { uploadController, questionImageUpload } from '../controllers/uploadController';
+import { asyncHandler } from '../middleware/errorHandler';
+import { authMiddleware, adminMiddleware } from '../middleware/auth';
 
 const router = express.Router();
 

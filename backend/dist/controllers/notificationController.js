@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.notificationController = void 0;
-const notificationService_1 = require("@/services/notificationService");
+const notificationService_1 = require("../services/notificationService");
 class NotificationController {
     constructor() {
         this.getPublishedCompetitions = async (_req, res) => {

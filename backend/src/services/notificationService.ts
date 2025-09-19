@@ -1,4 +1,4 @@
-import { executeQuery } from '@/config/database';
+import { executeQuery } from '../config/database';
 
 export type NotificationRecipient = {
   UserID: string;

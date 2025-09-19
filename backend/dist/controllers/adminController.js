@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.adminController = void 0;
-const adminService_1 = require("@/services/adminService");
+const adminService_1 = require("../services/adminService");
 class AdminController {
     async getStats(req, res) {
         try {

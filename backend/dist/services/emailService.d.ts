@@ -1,4 +1,4 @@
-import { User } from '@/types';
+import { User } from '../types';
 declare class EmailService {
     private transporter;
     constructor();

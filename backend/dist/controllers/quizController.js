@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.quizController = void 0;
-const quizService_1 = require("@/services/quizService");
+const quizService_1 = require("../services/quizService");
 const express_validator_1 = require("express-validator");
-const errorHandler_1 = require("@/middleware/errorHandler");
+const errorHandler_1 = require("../middleware/errorHandler");
 class QuizController {
     async startQuiz(req, res) {
         const errors = (0, express_validator_1.validationResult)(req);

@@ -1,4 +1,4 @@
-import { User, RegisterRequest } from '@/types';
+import { User, RegisterRequest } from '../types';
 declare class UserService {
     findByEmail(email: string): Promise<User | null>;
     findById(userId: string): Promise<User | null>;

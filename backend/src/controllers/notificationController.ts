@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { notificationService } from '@/services/notificationService';
+import { notificationService } from '../services/notificationService';
 
 class NotificationController {
   getPublishedCompetitions = async (_req: Request, res: Response) => {

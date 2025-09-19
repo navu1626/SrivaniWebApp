@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.quizService = exports.QuizService = void 0;
-const database_1 = require("@/config/database");
-const errorHandler_1 = require("@/middleware/errorHandler");
+const database_1 = require("../config/database");
+const errorHandler_1 = require("../middleware/errorHandler");
 class QuizService {
     async startQuiz(userId, competitionId) {
         const existing = await (0, database_1.executeQuery)(`SELECT TOP 1 AttemptID FROM QuizAttempts

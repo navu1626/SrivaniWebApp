@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const multer_1 = __importDefault(require("multer"));
 const path_1 = __importDefault(require("path"));
-const uploadController_1 = require("@/controllers/uploadController");
-const errorHandler_1 = require("@/middleware/errorHandler");
-const auth_1 = require("@/middleware/auth");
+const uploadController_1 = require("../controllers/uploadController");
+const errorHandler_1 = require("../middleware/errorHandler");
+const auth_1 = require("../middleware/auth");
 const router = express_1.default.Router();
 const storage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {

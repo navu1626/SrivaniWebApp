@@ -1,5 +1,5 @@
-import { executeQuery } from '@/config/database';
-import { DatabaseError } from '@/middleware/errorHandler';
+import { executeQuery } from '../config/database';
+import { DatabaseError } from '../middleware/errorHandler';
 
 class AdminService {
   async getOverviewStats(): Promise<any> {

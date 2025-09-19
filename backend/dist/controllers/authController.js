@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.authController = void 0;
 const express_validator_1 = require("express-validator");
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
-const authService_1 = require("@/services/authService");
-const userService_1 = require("@/services/userService");
-const emailService_1 = require("@/services/emailService");
-const errorHandler_1 = require("@/middleware/errorHandler");
+const authService_1 = require("../services/authService");
+const userService_1 = require("../services/userService");
+const emailService_1 = require("../services/emailService");
+const errorHandler_1 = require("../middleware/errorHandler");
 class AuthController {
     async login(req, res) {
         const errors = (0, express_validator_1.validationResult)(req);

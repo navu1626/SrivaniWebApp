@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, param } from 'express-validator';
-import { quizController } from '@/controllers/quizController';
-import { asyncHandler } from '@/middleware/errorHandler';
+import { quizController } from '../controllers/quizController';
+import { asyncHandler } from '../middleware/errorHandler';
 
 const router = express.Router();
 

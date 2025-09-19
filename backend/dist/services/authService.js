@@ -7,8 +7,8 @@ exports.authService = void 0;
 const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const uuid_1 = require("uuid");
-const database_1 = require("@/config/database");
-const errorHandler_1 = require("@/middleware/errorHandler");
+const database_1 = require("../config/database");
+const errorHandler_1 = require("../middleware/errorHandler");
 class AuthService {
     async generateTokens(user) {
         const jwtSecret = process.env.JWT_SECRET;

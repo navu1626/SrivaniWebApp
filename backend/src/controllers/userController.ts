@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
-import { userService } from '@/services/userService';
-import { ApiResponse, PaginatedResponse } from '@/types';
+import { userService } from '../services/userService';
+import { ApiResponse, PaginatedResponse } from '../types';
 import { 
   ValidationError, 
   NotFoundError 
-} from '@/middleware/errorHandler';
+} from '../middleware/errorHandler';
 
 class UserController {
   /**
