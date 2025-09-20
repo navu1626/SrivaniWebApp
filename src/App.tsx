@@ -1,5 +1,6 @@
 // React import not required with the new JSX runtime
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -25,11 +26,52 @@ import Support from './pages/Support';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { AuthProvider } from './contexts/AuthContext';
 
+function ScrollToTopOnRouteChange() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location]);
+  return null;
+}
+
+function BackgroundImage() {
+  useEffect(() => {
+    // Only apply on mobile devices
+    const isMobile = window.innerWidth <= 767;
+    if (!isMobile) return;
+    const bg = document.querySelector('.guruji-bg-overlay') as HTMLElement | null;
+    if (!bg) return;
+    const onScroll = () => {
+      bg.style.transform = `translateY(${window.scrollY}px)`;
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  return (
+    <div
+      className="fixed inset-0 -z-10 guruji-bg-overlay"
+      aria-hidden="true"
+    />
+  );
+}
+
 function App() {
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).tagName === 'BUTTON') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+    document.addEventListener('click', handler, true);
+    return () => document.removeEventListener('click', handler, true);
+  }, []);
+
   return (
     <AuthProvider>
       <LanguageProvider>
         <Router>
+          <ScrollToTopOnRouteChange />
+          <BackgroundImage />
           <div style={{ paddingTop: 'var(--header-height, 4rem)' }} className="min-h-screen bg-cream-50 flex flex-col">
             <Header />
             <main className="flex-grow">

@@ -4,7 +4,7 @@ import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
 const backendEnv = import.meta.env.VITE_BACKEND_ENV;
 const API_BASE_URL =
   backendEnv === 'local'
-    ? 'http://localhost:5000'
+    ? 'http://localhost:3005'
     : 'https://srivaniwebapp.onrender.com';
 const API_VERSION = 'v1';
 
